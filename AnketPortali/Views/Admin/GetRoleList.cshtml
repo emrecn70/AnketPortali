@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "GetRoleList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<AppRole>
+
+<a asp-action="RoleAdd" class="btn btn-primary">Role Ekle</a>
+<br />
+<br />
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

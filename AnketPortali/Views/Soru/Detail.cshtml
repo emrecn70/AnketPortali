@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+}
+@model SoruModel
+<h3>Soru Detayı</h3>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <table class="table">
+            <tr>
+                <td><b>Soru</b></td>
+                <td>@Model.Question</td>
+            </tr>
+            <tr>
+                <td><b>Cevap</b></td>
+                <td>@Model.Description</td>
+            </tr>
+        </table>
+
+        <a asp-action="Index" class="btn btn-outline-secondary">Geri Dön</a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-warning">Düzenle</a>
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger">Sil</a>
+
+    </div>
+</div>
